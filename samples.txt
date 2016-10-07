@@ -1,0 +1,7 @@
+# This is am example file.
+# Create a file like this one, and save it on the directory containing the exome files.
+# Be sure to separate names and barcode numbers by a single <tab> (and not a block of spaces).
+
+John_doe	3
+
+

@@ -41,7 +41,10 @@ else:
         samplesfile = os.path.join(os.path.normpath(paste), 'samples.txt')
         try:
             with open(samplesfile, 'r') as samplesfile:
-                samples = [sample.strip().split('\t') for sample in samplesfile.readlines()]
+                sample_lines = [sample for sample in samplesfile.readlines() if not sample.lstrip().startswith('#')]
+                samples = [sample.strip().split('\t') for sample in sample_lines if len(sample.strip().split('\t')) == 2]
+                if samples == []:
+                    messagebox.showwarning('Warning', 'No valid samples found in "samples.txt".')
         except FileNotFoundError:
             messagebox.showwarning('Warning', 'No "samples.txt" file found at: ' + paste)
         else:
