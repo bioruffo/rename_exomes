@@ -7,4 +7,4 @@ Usage:
     i.e. if the sample "John Doe" corresponds to barcode IonXpress_003, save this text as samples.txt:  
         John_Doe <tab> 3  
 2)  Copy the directory name to your clipboard  
-3)  Execute the rename_exomes.py file.
+3)  Launch the rename_exomes.py script.
